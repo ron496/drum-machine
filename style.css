@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+$darkAccent: #224B4B;
+$lightAccent: #2CDA9D;
+$backgroundBase: #619E9E;
+
+body {
+  background: $backgroundBase;
+}
+
+.preview, i, .spacer, .title {
+  display: inline-block;
+}
+
+.toolbar {
+  width: 99%;
+  background: $darkAccent;
+  padding: 5px 4px 5px 3px;
+  border: 1px solid darken($backgroundBase, 35%);
+  border-bottom: none;
+  i {
+    border: none;
+    outline: none;
+    width: 25px;
+    &:hover {
+      color: $lightAccent;
+      cursor: pointer;
+    }
+  }
+  .spacer {
+    width: 15px;
+    height: 20px;
+    vertical-align: bottom;
+  }
+}
+
+.editorWrap {
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  box-shadow: 1px 1px 10px 2px darken($backgroundBase, 20%);
+}
+textarea {
+  width: 99%;
+  min-height: 200px;
+  margin-bottom: -5px;
+  resize: vertical;
+  outline: none;
+  border-top:none;
+  background: lighten($backgroundBase, 30%);
+  border: 1px solid darken($backgroundBase, 25%);
+  padding-left: 5px;
+}
+
+.previewWrap {
+  width: 80%;
+  margin: 20px auto 0 auto;
+  min-height: 200px;
+  padding-right: 20px;
+  background: lighten($backgroundBase, 15%);
+  box-shadow: 7px 5px 20px 2px darken($backgroundBase, 20%);
+  overflow-wrap: break-word;
+  .preview {
+    vertical-align: top;
+    margin-left: 5px;
+  }
+}
+
+.title-div {
+  font-size: 30px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  .text {
+    margin-top: 2px;
+    vertical-align: top;
+    font-family: Oswald;
+    margin-left: 5px;
+  }
+  img {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    margin: 10px 0;
+  }
+  .editorWrap {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .previewWrap {
+    width: 95vw;
+    margin: 20px auto;
+    .preview {
+      width: 100%;
+      img {
+        height: 200px;
+      }
+    }
+  }
+}
+
+// MARKDOWN STYLES
+blockquote {
+  border-left: 3px solid #224B4B;
+  color: #224B4B;
+  padding-left: 5px;
+  margin-left: 25px;
+}
+
+code {
+  background: $darkAccent;
+  color: $lightAccent;
+  padding: 1px 4px 2px 4px;
+  font-size: 11px;
+}
+
+pre {
+  background: $darkAccent;
+  padding: 5px 0 5px 5px;
+  code {
+    text-shadow: 3px 2px 1px black;
+  }
+}
+
+h1 {
+  border-bottom: 2px solid $darkAccent;
+}
+
+h2 {
+  border-bottom: 1px solid $darkAccent;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 2px solid $darkAccent;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
